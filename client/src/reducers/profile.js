@@ -4,7 +4,6 @@ import {
   CLEAR_PROFILE,
   UPDATE_PROFILE,
   GET_PROFILES,
-  GET_PEPOS,
   GET_REPOS
 } from '../actions/types';
 
