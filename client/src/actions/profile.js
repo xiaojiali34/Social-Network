@@ -53,7 +53,7 @@ export const getProfileById = userId => async dispatch => {
     const res = await axios.get(`/api/profile/user/${userId}`);
 
     dispatch({
-      type: GET_PROFILES,
+      type: GET_PROFILE,
       payload: res.data
     });
   } catch (err) {
@@ -101,7 +101,7 @@ export const createProfile = (
       payload: res.data
     });
 
-    dispatch(setAlert(edit ? 'Profile Updated' : 'Profile Created'));
+    dispatch(setAlert(edit ? 'Profile Updated' : 'Profile Created', 'success'));
 
     if (!edit) {
       history.push('/dashboard');
